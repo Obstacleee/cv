@@ -1,25 +1,8 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import compression from 'compression';
+import fs from 'fs';
+import { join } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Activer la compression pour de meilleures performances
-app.use(compression());
-
-// Servir les fichiers statiques du dossier dist (créé par vite build)
-app.use(express.static(join(__dirname, 'dist')));
-
-// Pour SPA, renvoyer index.html pour toutes les routes
-app.get('*', (req, res) => {
-    res.sendFile(join(__dirname, 'dist', 'index.html'));
-});
-
-app.listen(PORT, () => {
-    console.log(`Serveur démarré sur le port ${PORT}`);
-});
+// Plus tard dans le code
+if (!fs.existsSync(join(__dirname, 'dist'))) {
+    console.error("Le dossier 'dist' n'existe pas. Le build n'a pas été exécuté correctement.");
+    // Afficher un message d'erreur au lieu de planter
+}

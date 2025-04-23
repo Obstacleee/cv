@@ -4,13 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
     "start": "node server.js",
     "heroku-postbuild": "npm run build"
   },
+  "engines": { "node": "20.15.1" },
   "dependencies": {
     "@react-spring/three": "^9.7.5",
     "@react-three/drei": "^9.122.0",
