@@ -5,7 +5,7 @@ import { certificationsData } from '../../data/certificationsData';
 
 const Certifications = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const categories = ['All', 'Python', 'Sql', 'JavaScript', 'React', 'Node.js'];
+  const categories = ['All', 'Python', 'AI', 'Cybersecurity'];
 
   const filteredCertifications = activeFilter === 'All'
     ? certificationsData
@@ -25,9 +25,7 @@ const Certifications = () => {
             Certifications
           </h2>
           <div className="w-20 h-1 bg-primary-600 dark:bg-primary-400 mx-auto mb-8"></div>
-          <p className="text-dark-700 dark:text-dark-300 max-w-3xl mx-auto text-lg">
-            TEXTE Certifications
-          </p>
+
         </motion.div>
 
         <motion.div

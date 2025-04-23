@@ -26,7 +26,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-400 dark:to-accent-400">
-              TEXTE BULDING
+              Lucas Delon
             </h1>
           </motion.div>
           
@@ -36,7 +36,7 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-lg sm:text-xl text-dark-700 dark:text-dark-300 mb-8 max-w-xl mx-auto md:mx-0"
           >
-            TEXTE IA/ML
+            Développeur IA et Web | Passionné par la technologie et l'innovation. Je crée des solutions numériques qui transforment les idées en réalité.
           </motion.p>
           
           <motion.div 

@@ -12,62 +12,72 @@ interface Certification {
 export const certificationsData: Certification[] = [
   {
     id: 1,
-    name: 'TensorFlow Developer Certificate',
-    organization: 'Google',
-    category: 'AI/ML',
-    date: 'Dec 2023',
+    name: 'Data Visualization with Python',
+    organization: 'Kaggle',
+    category: 'Python',
+    date: 'mars 2024',
     description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
-    logo: 'https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg',
-    credentialUrl: 'https://www.credential.net/'
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZ5JAPSmxplcu-YyshqQea-KR7lx_LdH2TQ&s',
+    credentialUrl: 'https://www.kaggle.com/learn/certification/lucasdelon/data-visualization'
   },
   {
     id: 2,
-    name: 'AWS Machine Learning Specialty',
-    organization: 'Amazon Web Services',
-    category: 'Cloud',
-    date: 'Nov 2023',
-    description: 'Advanced certification for designing and implementing ML solutions on AWS.',
-    logo: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg',
-    credentialUrl: 'https://www.credential.net/'
+    name: 'Introduction to Generative AI',
+    organization: 'Google Cloud',
+    category: 'AI',
+    date: 'mars 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://cdn.qwiklabs.com/RshPhz3CtNIya%2F8v2wDfRsaWLitOB3yRV73Oqq1iAtQ%3D',
+    credentialUrl: 'https://www.cloudskillsboost.google/public_profiles/e064d324-6f05-4254-a564-8a4f21090d3d/badges/8323617?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share'
   },
   {
     id: 3,
-    name: 'Deep Learning Specialization',
-    organization: 'DeepLearning.AI',
-    category: 'AI/ML',
-    date: 'Oct 2023',
-    description: 'Comprehensive specialization in deep learning and neural networks.',
-    logo: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg',
-    credentialUrl: 'https://www.credential.net/'
+    name: 'Introduction to Large Language Models',
+    organization: 'Google Cloud',
+    category: 'AI',
+    date: 'mars 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://cdn.qwiklabs.com/RshPhz3CtNIya%2F8v2wDfRsaWLitOB3yRV73Oqq1iAtQ%3D',
+    credentialUrl: 'https://www.cloudskillsboost.google/public_profiles/e064d324-6f05-4254-a564-8a4f21090d3d/badges/8323642?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share'
   },
   {
     id: 4,
-    name: 'Professional Data Engineer',
+    name: 'Introduction to Responsible AI',
     organization: 'Google Cloud',
-    category: 'Data Science',
-    date: 'Sep 2023',
-    description: 'Certification for designing and building data processing systems.',
-    logo: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg',
-    credentialUrl: 'https://www.credential.net/'
+    category: 'AI',
+    date: 'mars 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://cdn.qwiklabs.com/RshPhz3CtNIya%2F8v2wDfRsaWLitOB3yRV73Oqq1iAtQ%3D',
+    credentialUrl: 'https://www.cloudskillsboost.google/public_profiles/e064d324-6f05-4254-a564-8a4f21090d3d/badges/8323664?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share'
   },
   {
     id: 5,
-    name: 'Azure AI Engineer Associate',
-    organization: 'Microsoft',
-    category: 'AI/ML',
-    date: 'Aug 2023',
-    description: 'Certification for implementing AI solutions using Azure Cognitive Services and ML.',
-    logo: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg',
-    credentialUrl: 'https://www.credential.net/'
+    name: 'MOOC SecNumacadémie',
+    organization: 'SecNumacadémie',
+    category: 'Cybersecurity',
+    date: 'mars 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://fr.outscale.com/wp-content/uploads/2019/12/SecNumCloud-1.png',
+    credentialUrl: ''
   },
   {
     id: 6,
-    name: 'Full Stack Development',
-    organization: 'Meta',
-    category: 'Development',
-    date: 'Jul 2023',
-    description: 'Professional certification in modern full-stack web development.',
-    logo: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg',
-    credentialUrl: 'https://www.credential.net/'
-  }
+    name: 'Python',
+    organization: 'Kaggle',
+    category: 'Python',
+    date: 'mars 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZ5JAPSmxplcu-YyshqQea-KR7lx_LdH2TQ&s',
+    credentialUrl: 'https://www.kaggle.com/learn/certification/lucasdelon/python'
+  },
+  {
+    id: 7,
+    name: 'Pandas',
+    organization: 'Kaggle',
+    category: 'Python',
+    date: 'févr. 2024',
+    description: 'Professional certification demonstrating practical machine learning skills with TensorFlow.',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZ5JAPSmxplcu-YyshqQea-KR7lx_LdH2TQ&s',
+    credentialUrl: 'https://www.kaggle.com/learn/certification/lucasdelon/pandas'
+  },
 ];

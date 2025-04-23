@@ -46,14 +46,14 @@ const SkillsNetwork = () => {
   
   // Define skills with positions in 3D space
   const skills = [
-    { label: 'Python', position: [0, 0, 0], size: 1.2, color: '#3B82F6' },
-    { label: 'TensorFlow', position: [-3, 1, -1], size: 0.9, color: '#8B5CF6' },
-    { label: 'PyTorch', position: [2.5, -1.5, 1], size: 0.8, color: '#8B5CF6' },
-    { label: 'NLP', position: [-2, -2, 2], size: 0.7, color: '#3B82F6' },
-    { label: 'Computer Vision', position: [3, 2, -2], size: 0.8, color: '#3B82F6' },
-    { label: 'Reinforcement Learning', position: [1, 3, 1], size: 0.6, color: '#8B5CF6' },
-    { label: 'MLOps', position: [-3, -1, -3], size: 0.6, color: '#8B5CF6' },
-    { label: 'Data Science', position: [0, -3, -1], size: 0.7, color: '#3B82F6' },
+    { label: 'Moi', position: [0, 0, 0], size: 1.2, color: '#3B82F6' },
+    { label: 'Rust', position: [-3, 1, -1], size: 0.9, color: '#8B5CF6' },
+    { label: 'React', position: [2.5, -1.5, 1], size: 0.8, color: '#8B5CF6' },
+    { label: 'Flask', position: [-2, -2, 2], size: 0.7, color: '#3B82F6' },
+    { label: 'Pandas', position: [3, 2, -2], size: 0.8, color: '#3B82F6' },
+    { label: 'Python', position: [1, 3, 1], size: 0.6, color: '#8B5CF6' },
+    { label: 'Mysql', position: [-3, -1, -3], size: 0.6, color: '#8B5CF6' },
+    { label: 'InfluxDB', position: [0, -3, -1], size: 0.7, color: '#3B82F6' },
   ];
   
   // Connect nodes with lines

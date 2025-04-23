@@ -59,8 +59,8 @@ const Skills = () => {
           className="mt-16 pt-16 border-t border-dark-200 dark:border-dark-800"
         >
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {['TensorFlow', 'PyTorch', 'Keras', 'scikit-learn', 'OpenCV', 'NLTK', 'Hugging Face', 'Flask', 'FastAPI', 'Docker', 'AWS', 'Google Cloud'].map((tech, index) => (
-              <div 
+            {['OpenCV', 'Arima', 'Statistique Avancé', 'Vision par ordinateur', 'FastAPI', 'Actix Web'].map((tech, index) => (
+              <div
                 key={index}
                 className="bg-white dark:bg-dark-800 rounded-lg p-4 flex items-center justify-center h-24 shadow-md hover:shadow-lg transition-shadow"
               >

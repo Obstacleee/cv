@@ -7,30 +7,23 @@ const About = () => {
   // Education and work details
   const education = [
     {
-      degree: 'Ph.D. in Machine Learning',
-      institution: 'Stanford University',
-      year: '2018 - 2022',
-      description: 'Specialized in reinforcement learning and neural networks, with focus on generative models.',
+      degree: 'Bachelor in Artificial Intelligence & Digital Business',
+      institution: 'IA School',
+      year: 'sept. 2023 - juin 2026',
+      description: 'Formation en intelligence artificielle et développement numérique',
     },
 
   ];
 
   const experience = [
     {
-      position: 'Senior AI Engineer',
-      company: 'DeepTech AI',
-      year: '2022 - Present',
-      description: 'Lead AI research team developing cutting-edge computer vision and NLP solutions.',
+      position: 'Développeur applicatif',
+      company: 'Reka Industrie',
+      year: 'juin 2024 - Actuellement',
+      description: 'Réalisation de diverse logiciel comme la gestion de stock et de la vision par ordinateur ect...',
     },
 
-  ];
 
-  const awards = [
-    {
-      title: 'Best Paper Award',
-      organization: 'NeurIPS Conference',
-      year: '2022',
-    },
   ];
 
   const containerVariants = {
@@ -65,7 +58,7 @@ const About = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-primary-600 dark:text-primary-400">À propos</h2>
           <div className="w-20 h-1 bg-primary-600 dark:bg-primary-400 mx-auto mb-8"></div>
           <p className="text-dark-700 dark:text-dark-300 max-w-3xl mx-auto text-lg">
-            TEXTE RESUMER
+            Étudiant à l’IA School, je suis développeur applicatif en alternance chez REKA INDUSTRIE. J’ai mené des projets en React, Vue3, Rust, Python (data analyse), SQL, et InfluxDB, notamment pour la prédiction de stocks et l’automatisation (scraping, OCR). Certifié Google Cloud et Kaggle, autonome et polyvalent, je cherche une alternance en data analyse ou développement.
           </p>
         </motion.div>
 
@@ -89,13 +82,13 @@ const About = () => {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-6 text-dark-800 dark:text-dark-200">
-                Text 1
+                Ma Passion a votre service
               </h3>
               <p className="text-dark-600 dark:text-dark-400 mb-6">
-                  Text 2
+                Je suis passionné par le développement d'applications et l'analyse de données. Mon objectif est de créer des solutions innovantes qui répondent aux besoins des utilisateurs tout en optimisant les processus.
               </p>
               <p className="text-dark-600 dark:text-dark-400">
-                Text 3
+                Je suis convaincu que la technologie peut transformer notre façon de travailler et de vivre. C'est pourquoi je m'efforce de rester à jour avec les dernières tendances et technologies dans le domaine du développement et de l'analyse de données.
               </p>
             </motion.div>
 

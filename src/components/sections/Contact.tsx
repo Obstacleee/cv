@@ -1,9 +1,28 @@
-import React, {useState} from 'react';
-// Ajoute ces imports en haut du fichier
-import {AnimatePresence, m, motion} from 'framer-motion';
+import { motion, useAnimate } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
 import {Github, Linkedin, Mail, MapPin, Phone, Send} from 'lucide-react';
 
+
+
+
 const Contact = () => {
+    const [scope, animate] = useAnimate();
+    const [particles, setParticles] = useState([]);
+
+
+// Fonction pour générer des confettis lorsque le formulaire est soumis
+    const generateConfetti = () => {
+        const newParticles = Array.from({ length: 50 }).map((_, i) => ({
+            id: i,
+            x: Math.random() * 400 - 200,
+            y: Math.random() * -300,
+            rotation: Math.random() * 360,
+            scale: Math.random() * 0.6 + 0.4,
+            color: ['#FF4D4D', '#4DFF4D', '#4D4DFF', '#FFFF4D', '#FF4DFF'][Math.floor(Math.random() * 5)]
+        }));
+        setParticles(newParticles);
+    };
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -78,66 +97,70 @@ const Contact = () => {
 
     return (
         <>
-            <AnimatePresence mode="wait">
-                {formStatus.submitted && (
+            {formStatus.submitted && (
+                <motion.div
+                    key="overlay"
+                    ref={scope}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-500 bg-black/90 backdrop-blur-md flex items-center justify-center overflow-hidden"
+                >
                     <motion.div
-                        key="overlay"
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
-                        className="fixed inset-0 z-500 bg-black/90 backdrop-blur-md flex items-center justify-center"
-                        style={{pointerEvents: 'auto'}}
+                        initial={{ scale: 0.5 }}
+                        animate={{
+                            scale: [0.5, 1.2, 1],
+                            rotate: [0, 10, 0]
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            times: [0, 0.6, 1],
+                            ease: "easeInOut"
+                        }}
+                        className="text-center relative"
+                        onAnimationComplete={() => generateConfetti()}
                     >
-                        <motion.div
-                            initial={{scale: 0.5, rotate: -15}}
-                            animate={{scale: 1, rotate: 0}}
-                            exit={{scale: 0.5, opacity: 0}}
-                            transition={{type: 'spring', stiffness: 120}}
-                            className="text-center"
-                        >
-                            {/* Icone check animée */}
-                            <svg
-                                className="w-32 h-32 mx-auto text-green-400 mb-8"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <motion.path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M5 13l4 4L19 7"
-                                    initial={{pathLength: 0}}
-                                    animate={{pathLength: 1}}
-                                    transition={{duration: 0.5, delay: 0.2}}
-                                />
-                            </svg>
+                        {/* Confettis */}
+                        {particles.map((particle) => (
                             <motion.div
-                                initial={{y: 20, opacity: 0}}
-                                animate={{y: 0, opacity: 1}}
-                                transition={{delay: 0.5}}
-                                className="space-y-4"
-                            >
-                                <h3 className="text-4xl font-bold text-white mb-2">
-                                    Message envoyé !
-                                </h3>
-                                <p className="text-xl text-white/80">{formStatus.message}</p>
-                                <motion.div
-                                    className="h-1 bg-white/20 rounded-full mt-8 mx-auto"
-                                    style={{width: '200px'}}
-                                >
-                                    <motion.div
-                                        className="h-full bg-green-400 rounded-full"
-                                        initial={{scaleX: 0, originX: 0}}
-                                        animate={{scaleX: 1, originX: 0}}
-                                        transition={{duration: 4.8, ease: "linear"}}
-                                    />
-                                </motion.div>
-                            </motion.div>
-                        </motion.div>
+                                key={particle.id}
+                                initial={{ x: 0, y: 0, opacity: 0, rotate: 0 }}
+                                animate={{
+                                    x: particle.x,
+                                    y: [0, particle.y],
+                                    opacity: [0, 1, 0],
+                                    rotate: [0, particle.rotation],
+                                    scale: [0, particle.scale, 0]
+                                }}
+                                transition={{
+                                    duration: 2.5,
+                                    ease: [0.23, 1, 0.32, 1],
+                                }}
+                                className="absolute top-1/2 left-1/2 w-4 h-4 rounded-full"
+                                style={{ backgroundColor: particle.color }}
+                            />
+                        ))}
+
+                        <h3 className="text-4xl font-bold text-white mb-4">
+                            Message envoyé!
+                        </h3>
+                        <p className="text-xl text-white/80 mb-8">{formStatus.message}</p>
+
+                        {/* Bouton animé */}
+                        <motion.button
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.2 }}
+                            className="px-6 py-3 bg-primary-600 text-white rounded-full"
+                            onClick={() => setFormStatus({...formStatus, submitted: false})}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            Super!
+                        </motion.button>
                     </motion.div>
-                )}
-            </AnimatePresence>
+                </motion.div>
+            )}
 
             <section id="contact" className="py-20 bg-white dark:bg-dark-900">
                 <div className="container mx-auto px-4">

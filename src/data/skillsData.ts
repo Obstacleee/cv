@@ -2,43 +2,50 @@ import { SkillGroup } from '../types';
 
 export const skillsData: SkillGroup[] = [
   {
-    title: 'Machine Learning',
-    skills: [
-      { name: 'Deep Learning', level: 95 },
-      { name: 'Neural Networks', level: 90 },
-      { name: 'Computer Vision', level: 92 },
-      { name: 'Natural Language Processing', level: 88 },
-      { name: 'Reinforcement Learning', level: 85 }
-    ]
-  },
-  {
     title: 'Programming',
     skills: [
       { name: 'Python', level: 95 },
+      { name: 'R', level: 80 },
+      { name: 'Rust', level: 65 },
       { name: 'JavaScript', level: 85 },
-      { name: 'C++', level: 75 },
-      { name: 'SQL', level: 85 },
-      { name: 'R', level: 80 }
+      { name: 'Vue3', level: 75 },
+      { name: 'React', level: 80 },
     ]
   },
   {
     title: 'Frameworks & Tools',
     skills: [
-      { name: 'TensorFlow', level: 92 },
-      { name: 'PyTorch', level: 90 },
-      { name: 'Scikit-learn', level: 88 },
-      { name: 'Docker', level: 82 },
+      { name: 'Git', level: 90 },
+      { name: 'Flask', level: 90 },
+      { name: 'Pandas', level: 88 },
+      { name: 'NumPy', level: 85 },
+      { name: 'Docker', level: 50 },
       { name: 'Git', level: 85 }
     ]
   },
   {
-    title: 'Cloud & Deployment',
+    title: 'BDD',
     skills: [
-      { name: 'AWS', level: 85 },
-      { name: 'Google Cloud', level: 80 },
-      { name: 'MLOps', level: 78 },
-      { name: 'CI/CD', level: 75 },
-      { name: 'Kubernetes', level: 70 }
+      { name: 'Mysql', level: 87 },
+      { name: 'MariaDB', level: 87 },
+      { name: 'InfluxDB', level: 84 },
+      { name: 'PostgreSQL', level: 70 },
+      { name: 'Docker', level: 50 },
+      { name: 'Git', level: 80 }
+    ]
+  },
+  {
+    title: 'Langues',
+    skills: [
+      { name: 'Français', level: 100 },
+      { name: 'Anglais', level: 70 },
+    ]
+  },
+  {
+    title: 'Cloud & Deploiement',
+    skills: [
+      { name: 'OVH', level: 70 },
+      { name: 'Google Cloud', level: 60 },
     ]
   }
 ];
